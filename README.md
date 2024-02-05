@@ -1,6 +1,12 @@
 # imgfx
 ImgFX lets you edit and get more info about images.
 
+# Compatibility
+
+ImgFX will only run on .NET 5 or newer runtimes.
+.NET Core, .NET Standard may not be supported.
+.NET Framework is not supported.
+
 # PNG Information
 Use `ImgFX.Png.PngContext` to achieve information about a Portable Network Graphics (PNG) image format, like:
 
