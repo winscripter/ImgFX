@@ -1,0 +1,81 @@
+body {
+    background-color: #313131;
+}
+
+p, h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-weight: 300;
+}
+
+div.select-object {
+    background-color: darkcyan;
+    margin-right: 40px;
+    margin-left: 40px;
+    width: calc(100% - 80px);
+    padding: 4px;
+    border: 1.5px solid white;
+}
+
+div.select-object:hover {
+    background-color: darkslategray;
+}
+
+div.select-object code {
+    font-family: Consolas;
+    color: white;
+    background-color: #454545;
+}
+
+button {
+    background-color: #262626;
+    padding: 2px 10px;
+    font-family: Segoe UI;
+    color: white;
+    user-select: none;
+}
+
+button:hover {
+    background-color: #171717;
+}
+
+textarea, input {
+    background-color: #262626;
+    color: white;
+    border-bottom: 2px solid purple;
+    border-radius: 2px;
+    outline: none;
+}
+
+textarea::placeholder, input::placeholder {
+    color: lightgray;
+}
+
+div.s2c-visualized-result {
+    border: 2px solid white;
+    height: 400px;
+    width: 400px;
+    overflow: auto;
+    resize: both;
+}
+
+div.s2c-single-pixel {
+    height: 24px;
+    width: 24px;
+    background-color: white;
+    border: 1px solid black;
+    display: inline-block;
+}
+
+code.multiline {
+    white-space: pre;
+    font-family: Consolas;
+    color: white;
+    background-color: #313131;
+    border-bottom: 2px solid purple;
+    border-radius: 2px;
+    overflow: auto;
+    min-height: 400px;
+    width: 500px;
+    display: block;
+}

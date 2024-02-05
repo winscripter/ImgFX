@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImgFXView</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/w3.css">
+</head>
+<body>
+    <div id="home-page">
+        <h1>Welcome to ImgFXView!</h1>
+
+        <p>Pick a category to get started:</p>
+        <div class="select-object" id="s2c">
+            <h1>Syntax to Color</h1>
+            <hr />
+            <p>Did you call <code>ToString()</code> on a <code>ArgbRectangleHandle</code>? Let's visualize the result!</p>
+        </div>
+        <br />
+        <div class="select-object" id="px2b">
+            <h1>Pixels to <code>Bitmap</code></h1>
+            <hr />
+            <p>Quickly create an image consisting of pixels here, and we'll turn it to a <code>Bitmap</code> for you.</p>
+        </div>
+        <br />
+        <br />
+        
+        <hr />
+        <p style="font-size: 9px;">ImgFXView is an open-source editing and visualizing web-based tool for ImgFX, an open-source image processing and context tool for .NET. We created both ImgFXView and ImgFX to ease image processing and context.</p>
+    </div>
+    <div id="s2c-start" style="display: none;">
+        <button title="Back" id="s2cstart-back">&larr;</button>
+
+        <p>Alright. We'll visualize your syntax. Just enter the syntax below and we'll visualize it for you.</p>
+
+        <textarea style="resize: both;" placeholder="Syntax goes here" id="s2c-syntax"></textarea>
+
+        <button id="start-s2c">Visualize</button>
+    </div>
+    <div id="s2c-visualize" style="display: none;">
+        <button title="Back" id="s2cv-back">&larr;</button>
+
+        <h1>Visualized result</h1>
+        <p>Here's what the syntax looks like in pixels.</p>
+        
+        <input type="number" placeholder="Enter pixel size here. Default is 24" id="px-size" style="width: 256px;"/> <button id="px-size-apply">Apply</button>
+
+        <div class="s2c-visualized-result" id="visualized-result">
+
+        </div>
+    </div>
+    <div id="px2b-start" style="display: none;">
+        <button title="Back" id="px2bstart-back">&larr;</button>
+
+        <h1>Pixels To Bitmap</h1>
+        <p>Alright. Just enter the width and height of the image below to get started!</p>
+
+        <input id="px2b-x" placeholder="Width" style="width: 220px;" type="number" /><br />
+        <input id="px2b-y" placeholder="Height" style="width: 220px;" type="number" /><br />
+        <button id="px2b-begin">Begin</button>
+    </div>
+    <div id="px2b-ui" style="display: none;">
+        <button title="Back" id="px2bui-back">&larr;</button>
+        
+        <h1>Editor</h1>
+        <p>Pick a color, and click on a pixel to give it a colour. By default, all colors are black.</p>
+        <input type="color" id="color-pixel" /><br />
+        <button id="px2b-fillall">Fill all</button><br />
+        <button id="px2b-applycolor">Apply</button><br />
+        <button id="px2b-cv2cs">To C#</button>
+
+        <div class="s2c-visualized-result" id="input-pixels">
+
+        </div>
+    </div>
+    <!--<button onclick="document.getElementById('id01').style.display='block'"
+    class="w3-button">Open Modal</button>-->
+
+    <div id="modal-code" class="w3-modal">
+        <div class="w3-modal-content">
+            <div class="w3-container">
+                <span onclick="document.getElementById('modal-code').style.display='none'"
+                class="w3-button w3-display-topright">&times;</span>
+                <p>Here's the result:</p>
+                <code class="multiline" id="px2bresult">
+                    Nothing to show here yet...
+                </code>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/ui.js"></script>
+    <script src="./js/syntax2color.js"></script>
+    <script src="./js/px2b.js"></script>
+</body>
+</html>
